@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(218, 218, 218);
+}
+
+/*ESTILOS DEL CONTENEDOR DEL SLIDER*/
+#slider-contain{
+  overflow: hidden;
+}
+
+/*ESTILOS DEL CONTENEDOR DE IMAGENES*/
+#slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition : all 0.3s ease-in; /*Una animacion para no hacer tan brusco el salto*/
+  align-items: center;
+}
+
+#slider img {
+  width: 100%;
+  aspect-ratio: 16/9; /*Definimos un tamaño para todas*/
+  object-fit: cover;  /*Crecera dependiendo de su nececidad*/
+}
