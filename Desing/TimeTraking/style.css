@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=Outfit:wght@300;400;600&family=PT+Sans:wght@400;700&family=Poppins:wght@200;400;600&family=Rubik:ital,wght@0,400;0,500;1,300&family=Staatliches&display=swap');
+
+:root {
+   --Blue: #5847eb;
+   --LightRedWork: #ff8c66;
+   --SoftBluePlay: #56c2e6;
+   --LightRedStudy: #ff5c7c;
+   --LimeGreenExercise: #4acf81;
+   --VioletSocial: #7536d3;
+   --SoftOrangeSelfCare: #f1c65b;
+   --VeryDarkBlue: #0f1424;
+   --DarkBlue: #1c1f4a;
+   --DesaturatedBlue: #6f76c8;
+   --PaleBlue: #bdc1ff;
+   --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; /* La caga mantendra el tamaño que se le asigne sin inportar la cantidad de contenido*/
+}
+
+body {
+   background-color: var(--VeryDarkBlue);
+   font-family: 'Rubik', sans-serif;
+   color: var(--PaleBlue);
+}
+
+
+.main-container {
+   width: 328px;
+   margin: 158px auto;
+}
+
+.first-section {
+   position: relative;
+}
+
+.main-card__user {
+   background-color: var(--Blue);
+   display: flex;
+   border-radius: 16px;
+   padding: 30px;
+   position: absolute;
+   width: 100%;
+   z-index: 1;
+}
+
+.main-card__img {
+   width: 72px;
+   margin-right: 10px;
+   border: 3px solid var(--white);
+   border-radius: 50%;
+}
+
+.main-card__title {
+   font-size: 0.9em;
+   margin: 10px 0 4px;
+}
+
+.main-card__name {
+   font-size: 1.5em;
+   font-weight: 300;
+   color: var(--white);
+}
+
+.main-card__dates {
+   background-color: var(--DarkBlue);
+   border-radius: 16px;
+   display: flex;
+   justify-content: space-around;
+   padding-top: 52px;
+   font-size: 1.2em;
+   height: 100px;
+   position: absolute;
+   width: 100%;
+   top: 105px;
+}
+
+.main-card__frequency:hover {
+   /* z-index: 1; */
+   cursor: pointer;
+   color: var(--white);
+}
+
+.second-section {
+  padding-top: 220px;
+}
+
+.card {
+   position: relative;
+   margin-bottom: 105px;
+}
+
+.card__background {
+   background-color: var(--LightRedWork);
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
+   overflow: hidden;
+   height: 73px;
+}
+
+.card__img {
+   margin-top: -10px;
+   padding-left: 230px;
+}
+
+.card__details {
+   background-color: var(--DarkBlue);
+   display: flex;
+   flex-direction: column;
+   height: 122px;
+   justify-content: space-between;
+   padding: 25px;
+   border-radius: 16px;
+   position: absolute;
+   width: 100%;
+   bottom: -88px;
+   transition: .3s ease-in-out;
+}
+
+.card__details:hover {
+   cursor: pointer;
+   background-color: var(--DesaturatedBlue);
+}
+
+.card__activity, .card__time {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.card__title {
+   font-weight: 500;
+   font-size: 1.2em;
+   color: var(--white);
+}
+
+.card__hour {
+   font-size: 2em;
+   color: var(--white);
+   font-weight: 300;
+}
+
+/* ############### FOOTER ############### */
+
+.attribution {
+   font-size: 16px;
+   text-align: center;
+   margin-bottom: 60px;
+}
+
+.attribution a {
+   color: hsl(228, 45%, 44%);
+   text-decoration: none;
+}
+
+
+@media (min-width: 1200px) {
+
+   .main-container {
+      width: 1150px;
+      display: flex;
+      margin: 100px auto;
+   }
+
+   .first-section {
+      margin-left: 25px;
+      width: 280px;
+      height: 564px;
+      padding-top: 24px;
+   }
+   .second-section {
+      width: 860px;
+      height: 564px;
+      padding-top: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 24px;
+   }
+
+   .main-card__user {
+      height: 340px;
+      flex-direction: column;
+   }
+
+   .main-card__img {
+      widows: 85px;
+      margin-bottom: 45px;
+   }
+
+   .main-card__title {
+      font-size: 1em;
+   }
+
+   .main-card__name {
+      font-size: 2.4em;
+   }
+
+   .main-card__dates {
+      margin-top: 225px;
+      height: 200px;
+      flex-direction: column;
+      padding: 40px 32px 18px;
+   }
+
+   .card {
+      width: 250px;
+      height: 240px;
+      margin-bottom: 25px;
+   }
+
+   .card__img {
+      padding-left: 140px;
+   }
+
+   .card__details {
+      height: 190px; /*200px*/
+      bottom: 0; /*-10px*/
+   }
+
+   .card__time {
+      height: 300px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 0;
+   }
+
+}

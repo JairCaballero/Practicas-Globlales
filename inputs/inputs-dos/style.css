@@ -1,0 +1,35 @@
+body {
+   margin: 100px;
+   background-color: #d3edf8;
+}
+.input-group {
+   position: relative;
+}
+
+.input {
+   padding: 10px;
+   background-color: #d3edf8;
+   border-radius: 2px;
+   outline: none;
+   color: #444444;
+   border: 1px solid #0da2ff;
+}
+.placeholder {
+   position: absolute;
+   top: 10px;
+   left: 8px;
+   font-size: 14px;
+   padding: 0px 5px;
+   color: #0da2ff;
+   transition: .3s;
+   pointer-events: none;
+}
+
+/* estilos a un elemento con clase "placeholder" cuando el elemento anterior con
+clase "input" tiene el estado de enfoque o está siendo mostrado */
+.input:focus + .placeholder,
+.input:not(:placeholder-shown)
++ .placeholder {
+   top: -10px;
+   background-color: #d3edf8;
+}
